@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Testing DMS Apps]">
+  <listeners>
+    <listener class-name="com.holisol.DMSSelenium.listeners.AllureReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Login page test(failed)">
+    <classes>
+      <class name="com.holisol.DMSSelenium.test.LoginPageTest">
+        <methods>
+          <include name="verifyLoginTitleTest"/>
+          <include name="doLoginTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.holisol.DMSSelenium.test.LoginPageTest -->
+    </classes>
+  </test> <!-- Login page test(failed) -->
+</suite> <!-- Failed suite [Testing DMS Apps] -->

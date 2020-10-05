@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing DMS Apps" >
+
+         <listeners>
+         
+         <listener class-name="com.holisol.DMSSelenium.listeners.AllureReportListener"/>
+        
+         </listeners>
+         
+	<test name="Login page test">
+		<classes>
+			<class name="com.holisol.DMSSelenium.test.LoginPageTest" />
+		</classes>
+	</test>
+
+	<!--  <test name="Home page test">
+		<classes>
+			<class name="com.holisol.DMSSelenium.test.HomePageTest" />
+		</classes>
+	</test> 
+ -->
+ 
+  <!--  <test name="Login page test">
+		<classes>
+			<class name="com.holisol.DMSSelenium.test.GenerateAwbPageTest" />
+		</classes>
+	  </test> -->
+
+	<!-- <test name="Contacts page test"> <classes> <class name="com.qa.hubspot.test.ContactsPageTest"/> 
+		</classes> </test>  -->
+
+</suite> 
