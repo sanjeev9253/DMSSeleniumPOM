@@ -4,7 +4,8 @@
 
          <listeners>
          
-         <listener class-name="com.holisol.DMSSelenium.listeners.AllureReportListener"/>
+         <!-- <listener class-name="com.holisol.DMSSelenium.listeners.AllureReportListener"/> -->
+         <listener class-name="com.holisol.DMSSelenium.listeners.ExtentReportListener"/>
         
          </listeners>
          
