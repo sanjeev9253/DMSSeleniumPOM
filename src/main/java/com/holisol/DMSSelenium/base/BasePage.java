@@ -7,15 +7,19 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
+
 
 import com.holisol.DMSSelenium.utils.ElementUtils;
 import com.holisol.DMSSelenium.utils.OptionManager;
 
+import freemarker.log.Logger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
@@ -51,7 +55,21 @@ public class BasePage {
 		
 		getDriver().manage().window().maximize();
 		
-		getDriver().get(prop.getProperty("url"));
+		try
+	    {
+			getDriver().get(prop.getProperty("url"));
+	    }
+	    catch(Exception e)
+	    {
+	        Reporter.log("network server is slow..check internet connection");
+	       // Logger.info("Unable to open the website")
+	        System.out.println("site is not working");
+	        
+	        
+	        throw new Error("network server is slow..check internet connection");
+	    }
+		
+		
 		
 		return getDriver();
 		
